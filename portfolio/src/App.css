@@ -38,10 +38,16 @@ header {
   align-items: center;
   justify-content: space-evenly;
 }
+.hero-text-handler h2 {
+  font-size: 36px;
+}
+.hero-text-handler p {
+  max-width: 400px;
+}
 .hero-img {
   margin-left: 10rem;
   background-position: fixed;
   background-size: cover;
-  max-width: 500px;
-  max-width: 500px;
+  max-width: 650px;
+  max-width: 650px;
 }
