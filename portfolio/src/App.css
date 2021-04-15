@@ -35,8 +35,10 @@ header {
   position: relative;
   top: 50px;
   display: flex;
-  align-items: center;
+  flex-flow: row wrap;
   justify-content: space-evenly;
+  align-items: center;
+  min-height: min-content;
 }
 .hero-text-handler h2 {
   font-size: 36px;
@@ -45,9 +47,23 @@ header {
   max-width: 400px;
 }
 .hero-img {
-  margin-left: 10rem;
   background-position: fixed;
   background-size: cover;
   max-width: 650px;
   max-width: 650px;
+}
+
+@media screen and (max-width: 650px) {
+  .hero-img {
+    background-position: none;
+    max-width: 500px;
+    max-height: 500px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero-img {
+    max-width: 300px;
+    max-height: 300px;
+  }
 }
