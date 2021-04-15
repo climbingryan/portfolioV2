@@ -2,13 +2,19 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: var(--base-color-);
+}
+:root {
+  --base-color-: #def7e5
 }
 
+/* =================  
+    ? Header
+ ===================*/
 header {
   display: flex;
   justify-content: space-between;
   padding: 25px;
-  background-color: #def7e5;
 }
 .nav-list {
   display: flex;
@@ -19,4 +25,23 @@ header {
 .nav-list li {
   margin: 0 35px;
   list-style-type: none;
+}
+
+
+/* =================  
+    ? Hero
+ ===================*/
+.hero-handler {
+  position: relative;
+  top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.hero-img {
+  margin-left: 10rem;
+  background-position: fixed;
+  background-size: cover;
+  max-width: 500px;
+  max-width: 500px;
 }
