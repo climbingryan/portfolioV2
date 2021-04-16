@@ -8,7 +8,12 @@
   font-family: 'Karla', sans-serif;
 }
 :root {
-  --base-color-: #def7e5
+  --base-color-: #def7e5;
+  --secondary-color-: #E5DEF7;
+  --accent-color-: #F7E5DE;
+}
+.accent {
+  background-color: var(--accent-color-);
 }
 
 /* =================  
@@ -51,8 +56,8 @@ nav {
   text-decoration: none;
 }
 .list-element:hover {
-  background-color: black;
-  color: white;
+  background-color: #F7E5DE;
+  color: black;
 }
 @media screen and (max-width: 696px) {
   .nav-list li {
@@ -116,25 +121,34 @@ nav {
     ? Projects
  ===================*/
 .projects-handler {
-  margin-top: 50px;
-  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: var(--secondary-color-);
+  height: 80vh;
+  min-width: 200px;
 }
 .project-container {
+  position: relative;
+  top: 25px;
   border: 1px solid black;
-  border-radius: 2px;
-  padding: 15px;
+  padding: 1px;
+  border-radius: 3px;
   margin: 5px 10px;
 }
+.project-text-container {
+  background-color: var(--accent-color-);
+  padding: 10px;
+}
 .project-text-container h3 {
-  margin-top: 5pxcd ;
+  background-color: var(--accent-color-);
+  margin-top: 5px;
   padding: 5px;
 }
 .project-text-container p {
-  max-width: 550px;
+  background-color: var(--accent-color-);
+  max-width: 450px;
   padding: 5px;
 }
 .img {
@@ -152,5 +166,7 @@ nav {
   height: 220px;
 }
 .pizza-hunt {
-  background-image: url('');
+  background-image: url('./assets/images/pizza-hunt.PNG');
+  width: 476px;
+  height: 220px;
 }
