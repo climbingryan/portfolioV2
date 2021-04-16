@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <div className='hero-handler'>
           <div className='hero-text-handler'>
-            <h2>Some Hero Title</h2>
+            <h2>Hi, I'm a FullStack Developer</h2>
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
