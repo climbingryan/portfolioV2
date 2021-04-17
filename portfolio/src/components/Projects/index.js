@@ -47,8 +47,6 @@ const Projects = () => {
         anime({
           targets: [`.${targetOne}`, `.${targetTwo}`],
           scale: .75,
-          translateX: 75,
-          direction: 'alternate'
         });
         break;
       case ('pwa'):
@@ -58,23 +56,19 @@ const Projects = () => {
         anime({
           targets: `.${targetOnePwa}`,
           scale: .75,
-          translateX: 50,
-          direction: 'alternate'
         });
         anime({
           targets: `.${targetTwoPwa}`,
           scale: .75,
-          translateX: -50,
-          direction: 'alternate'
         });
         break;
       case ('pizza-hunt'):
-        const targetOnePizza = e.relatedTarget.children[0].id;
+        console.log(e);  
+        const targetOnePizza = e.relatedTarget.firstChild.id;
         const targetTwoPizza = e.relatedTarget.children[1].id;
         anime({
           targets: [`.${targetOnePizza}`, `.${targetTwoPizza}`],
           scale: .75,
-          translateX: -50,
           direction: 'alternate'
         });
       default:
