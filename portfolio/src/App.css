@@ -9,7 +9,7 @@
 }
 :root {
   --base-color-: #def7e5;
-  --secondary-color-: #E5DEF7;
+  --secondary-color-: #d9cef5;
   --accent-color-: #F7E5DE;
 }
 .accent {
@@ -130,12 +130,19 @@ nav {
   min-width: 200px;
 }
 .project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   top: 25px;
   border: 1px solid black;
   padding: 1px;
   border-radius: 3px;
-  margin: 5px 10px;
+  margin: 10px 25px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .project-text-container {
   background-color: var(--accent-color-);
@@ -151,9 +158,22 @@ nav {
   max-width: 450px;
   padding: 5px;
 }
+
+.collectors-haven {
+  background-color: var(--accent-color-);
+}
+.pwa {
+  background-color: var(--accent-color-);
+}
+.pizza-hunt {
+  background-color: var(--accent-color-);
+}
+
+/* 
 .img {
   background-position: fixed;
   background-size: cover;
+  overflow: none;
 }
 .collectors-haven {
   background-image: url('./assets/images/collectors-haven.PNG');
@@ -169,4 +189,9 @@ nav {
   background-image: url('./assets/images/pizza-hunt.PNG');
   width: 476px;
   height: 220px;
-}
+}  */
+
+
+/* =================  
+    ? blank
+ ===================*/
