@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const ProjectModal = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return (
+    <div className='modal-handler'>
+      
+    </div>
+  );
+};
 
-export default ProjectModal
+export default ProjectModal;

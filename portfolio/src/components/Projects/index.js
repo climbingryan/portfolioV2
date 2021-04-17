@@ -52,25 +52,19 @@ const Projects = () => {
       case ('pwa'):
         const targetOnePwa = e._targetInst.sibling.memoizedProps.id;
         const targetTwoPwa = e._targetInst.return.child.memoizedProps.id;
-        console.log(targetTwoPwa);
         anime({
-          targets: `.${targetOnePwa}`,
-          scale: .75,
-        });
-        anime({
-          targets: `.${targetTwoPwa}`,
+          targets: [`.${targetOnePwa}`, `.${targetTwoPwa}`],
           scale: .75,
         });
         break;
       case ('pizza-hunt'):
-        console.log(e);  
         const targetOnePizza = e.relatedTarget.firstChild.id;
         const targetTwoPizza = e.relatedTarget.children[1].id;
         anime({
           targets: [`.${targetOnePizza}`, `.${targetTwoPizza}`],
           scale: .75,
-          direction: 'alternate'
         });
+        break;
       default:
         break;
     }
@@ -112,61 +106,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-
-// {
-//   title: "Collectors Haven",
-//   description: "This site was built using MERN stack along with apollo boost, GraphQl for the API, react-router-dom, and more. I worked on the UI & UX trying to make a responsive, but clean and intuitive ui. ",
-//   link: "https://aqueous-taiga-86315.herokuapp.com/",
-//   class: "collectors-haven",
-// },
-// {
-//   title: "Budget Tracker",
-//   description: "This was a challenge where i was to convert an existing app into a pwa. Included is a web manifest, service worker to handle offline functionality, and indexDb to store offline data for when the user goes back online",
-//   link: "https://safe-oasis-51981.herokuapp.com/",
-//   class: "pwa",
-// },
-// {
-//   title: "Pizza Hunt",
-//   description: "This was my first mongodb fullstack application built as a lesson during my bootcamp. Using Node.js, Mongodb, mongoose",
-//   link: "https://boiling-ravine-77749.herokuapp.com/",
-//   class: "pizza-hunt",
-// },
-
-{
-  /* <div className="project-text-container">
-              <h3>{project.title}</h3>
-              <p>
-                {project.description}{" "}
-                <a
-                  className="accent"
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Click Here
-                </a>
-              </p>
-            </div> */
-}
-
-// .img {
-//   background-position: fixed;
-//   background-size: cover;
-//   overflow: none;
-// }
-// .collectors-haven {
-//   background-image: url('./assets/images/collectors-haven.PNG');
-//   width: 476px;
-//   height: 220px;
-// }
-// .pwa {
-//   background-image: url('./assets/images/pwa-screenshot.PNG');
-//   width: 476px;
-//   height: 220px;
-// }
-// .pizza-hunt {
-//   background-image: url('./assets/images/pizza-hunt.PNG');
-//   width: 476px;
-//   height: 220px;
-// }

@@ -144,6 +144,25 @@ nav {
   border-radius: 50%;
   overflow: hidden;
 }
+
+.collectors-haven {
+  background-color: var(--accent-color-);
+}
+.pwa {
+  background-color: var(--accent-color-);
+}
+.pizza-hunt {
+  background-color: var(--accent-color-);
+}
+
+
+
+/* =================  
+    ? Modal
+ ===================*/
+.modal-handler {
+  display: inherit;
+}
 .project-text-container {
   background-color: var(--accent-color-);
   padding: 10px;
@@ -158,40 +177,3 @@ nav {
   max-width: 450px;
   padding: 5px;
 }
-
-.collectors-haven {
-  background-color: var(--accent-color-);
-}
-.pwa {
-  background-color: var(--accent-color-);
-}
-.pizza-hunt {
-  background-color: var(--accent-color-);
-}
-
-/* 
-.img {
-  background-position: fixed;
-  background-size: cover;
-  overflow: none;
-}
-.collectors-haven {
-  background-image: url('./assets/images/collectors-haven.PNG');
-  width: 476px;
-  height: 220px;
-}
-.pwa {
-  background-image: url('./assets/images/pwa-screenshot.PNG');
-  width: 476px;
-  height: 220px;
-}
-.pizza-hunt {
-  background-image: url('./assets/images/pizza-hunt.PNG');
-  width: 476px;
-  height: 220px;
-}  */
-
-
-/* =================  
-    ? blank
- ===================*/
