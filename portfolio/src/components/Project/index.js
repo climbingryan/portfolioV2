@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import anime from "animejs/lib/anime.es.js";
 
-import Modal from '../Modal';
+import Modal from "../Modal";
+import ModalContent from '../ModalContent';
 
 const Project = (props) => {
   const [hover, setHover] = useState("");
@@ -28,11 +29,11 @@ const Project = (props) => {
     });
   };
 
-
-
   return (
     <>
-    {openModal === true ? <Modal /> : null}
+      {openModal === true ? (
+        <Modal currentModalState={openModal} closeModal={setOpenModal} info={props} />
+      ) : null}
       <div
         id={props.projects.class}
         key={props.projects.title}

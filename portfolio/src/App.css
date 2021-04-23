@@ -165,6 +165,8 @@ nav {
     ? Modal
  ===================*/
 .modal-handler {
+  position: absolute;
+  z-index: 1000;
   display: inherit;
 }
 .project-text-container {
@@ -180,4 +182,7 @@ nav {
   background-color: var(--accent-color-);
   max-width: 450px;
   padding: 5px;
+}
+.modal-hidden {
+  display: none;
 }

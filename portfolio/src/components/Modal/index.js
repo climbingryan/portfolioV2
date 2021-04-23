@@ -1,12 +1,22 @@
 import React from "react";
 
-const Modal = ({ hoverState, children, onClose }) => {
-  console.log(hoverState);
+const Modal = ({ currentModalState, closeModal, info }) => {
+  const handleCloseModal = () => {
+    closeModal(false);
+    console.log("ModalState", currentModalState);
+  };
 
   return (
-    <div className='modal-handler'>
-      <button className='close-modal' onClick={onClose}>Close Modal</button>
-      {children}
+    <div className="modal-handler">
+      <button
+        className={currentModalState === true ? `close-modal` : "modal-hidden"}
+        onClick={handleCloseModal}
+      >
+        Close Modal
+      </button>
+      <h2>{info.projects.title}</h2>
+      <p>{info.projects.description}</p>
+      <a href={info.projects.link} target='_none'>Click To Vist the Site</a>
     </div>
   );
 };
