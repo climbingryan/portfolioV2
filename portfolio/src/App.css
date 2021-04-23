@@ -129,6 +129,10 @@ nav {
   height: 80vh;
   min-width: 200px;
 }
+.close-modal {
+  border: 1px solid black;
+  padding: 5px;
+}
 .project-container {
   display: flex;
   justify-content: center;

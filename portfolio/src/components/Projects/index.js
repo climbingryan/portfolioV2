@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import anime from 'animejs/lib/anime.es.js';
+
+import Project from '../Project';
 
 const Projects = () => {
-  const [hover, setHover] = useState('');
+
 
   const projects = [
     {
@@ -11,6 +12,8 @@ const Projects = () => {
         "This site was built using MERN stack along with apollo boost, GraphQl for the API, react-router-dom, and more. I worked on the UI & UX trying to make a responsive, but clean and intuitive ui. ",
       link: "https://aqueous-taiga-86315.herokuapp.com/",
       class: "collectors-haven",
+      id: 1,
+      key: 11,
     },
     {
       title: "Budget Tracker",
@@ -18,6 +21,8 @@ const Projects = () => {
         "This was a challenge where i was to convert an existing app into a pwa. Included is a web manifest, service worker to handle offline functionality, and indexDb to store offline data for when the user goes back online",
       link: "https://safe-oasis-51981.herokuapp.com/",
       class: "pwa",
+      id: 2,
+      key: 22,
     },
     {
       title: "Pizza Hunt",
@@ -25,73 +30,18 @@ const Projects = () => {
         "This was my first mongodb fullstack application built as a lesson during my bootcamp. Using Node.js, Mongodb, mongoose",
       link: "https://boiling-ravine-77749.herokuapp.com/",
       class: "pizza-hunt",
+      id: 3,
+      key: 33,
     },
   ];
-
-  const onHover = (e) => {
-    e.preventDefault();
-
-    const currentTarget = e._targetInst.pendingProps.id;
-
-    setHover(currentTarget);
-
-    anime({
-      targets: `#${currentTarget}`,
-      scale: 1.2
-    });
-
-    switch (currentTarget) {
-      case ('collectors-haven'):
-        const targetOne = e._targetInst.sibling.memoizedProps.id;
-        const targetTwo = e._targetInst.sibling.sibling.memoizedProps.id;
-        anime({
-          targets: [`.${targetOne}`, `.${targetTwo}`],
-          scale: .75,
-        });
-        break;
-      case ('pwa'):
-        const targetOnePwa = e._targetInst.sibling.memoizedProps.id;
-        const targetTwoPwa = e._targetInst.return.child.memoizedProps.id;
-        anime({
-          targets: [`.${targetOnePwa}`, `.${targetTwoPwa}`],
-          scale: .75,
-        });
-        break;
-      case ('pizza-hunt'):
-        const targetOnePizza = e.relatedTarget.firstChild.id;
-        const targetTwoPizza = e.relatedTarget.children[1].id;
-        anime({
-          targets: [`.${targetOnePizza}`, `.${targetTwoPizza}`],
-          scale: .75,
-        });
-        break;
-      default:
-        break;
-    }
-
-  };
-
-  const onLeave = () => {
-    setHover('')
-    anime({
-      targets: '.project-container',
-      scale: 1,
-    });
-  };
 
   return (
     <div id="projects" className="projects-handler">
       {projects.map((project) => {
         return (
-          <div
-            id={project.class}
-            key={project.title}
-            className={`project-container ${project.class}`}
-            onMouseEnter={(event) => onHover(event)}
-            onMouseOut={() => onLeave()}
-          >
-            <h2 className={project.class}>{project.title}</h2>
-          </div>
+          <>
+            <Project key={project.key} projects={project}/>
+          </>
         );
       })}
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
