@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import anime from "animejs/lib/anime.es.js";
 
 import Modal from "../Modal";
-import ModalContent from '../ModalContent';
 
 const Project = (props) => {
   const [hover, setHover] = useState("");
@@ -13,7 +12,9 @@ const Project = (props) => {
 
     const currentTarget = e._targetInst.pendingProps.id;
 
-    setHover(currentTarget);
+    if (hover === false) {
+      setHover(currentTarget);
+    }
 
     anime({
       targets: `#${currentTarget}`,
@@ -32,26 +33,24 @@ const Project = (props) => {
   return (
     <>
       {openModal === true ? (
-        <Modal currentModalState={openModal} closeModal={setOpenModal} info={props} />
+        <Modal
+          currentModalState={openModal}
+          closeModal={setOpenModal}
+          info={props}
+        />
       ) : null}
       <div
-        id={props.projects.class}
+        id={props.projects.classAnimation}
         key={props.projects.title}
-        className={`project-container ${props.projects.class}`}
+        className={`project-container ${props.projects.classAnimation}`}
         onMouseEnter={(event) => onHover(event)}
         onMouseOut={() => onLeave()}
         onClick={() => setOpenModal(true)}
       >
-        <h2 className={props.projects.class}>{props.projects.title}</h2>
+        <h2 className={props.projects.classAnimation}>{props.projects.title}</h2>
       </div>
     </>
   );
 };
 
 export default Project;
-{
-  /* <Modal>
-  <h3>Description</h3>
-  <p>{props.projects.description}</p>
-</Modal>; */
-}

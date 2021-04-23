@@ -8,15 +8,28 @@ const Modal = ({ currentModalState, closeModal, info }) => {
 
   return (
     <div className="modal-handler">
-      <button
-        className={currentModalState === true ? `close-modal` : "modal-hidden"}
-        onClick={handleCloseModal}
-      >
-        Close Modal
-      </button>
-      <h2>{info.projects.title}</h2>
-      <p>{info.projects.description}</p>
-      <a href={info.projects.link} target='_none'>Click To Vist the Site</a>
+      <div className="modal-container">
+        <h2 style={{ backgroundColor: "white" }}>{info.projects.title}</h2>
+        <div className={`${info.projects.img} modal-img`} alt="project"></div>
+        <div className="modal-text-container">
+          <p style={{ backgroundColor: "white" }}>
+            {info.projects.description}
+          </p>
+          <a
+            style={{ backgroundColor: "white" }}
+            href={info.projects.link}
+            target="_none"
+          >
+            Click To Vist the Site
+          </a>
+        </div>
+        <button
+          className={currentModalState === true ? `modal-btn` : "modal-hidden"}
+          onClick={handleCloseModal}
+        >
+          Close Modal
+        </button>
+      </div>
     </div>
   );
 };

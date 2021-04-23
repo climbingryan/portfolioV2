@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,600&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   background-color: var(--base-color-);
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
 }
 :root {
   --base-color-: #def7e5;
   --secondary-color-: #d9cef5;
-  --accent-color-: #F7E5DE;
+  --accent-color-: #f7e5de;
 }
 .accent {
   background-color: var(--accent-color-);
@@ -56,7 +56,7 @@ nav {
   text-decoration: none;
 }
 .list-element:hover {
-  background-color: #F7E5DE;
+  background-color: #f7e5de;
   color: black;
 }
 @media screen and (max-width: 696px) {
@@ -100,7 +100,9 @@ nav {
   max-width: 650px;
   max-width: 650px;
 }
-
+.upper-svg {
+  margin-top: 11.5px;
+}
 @media screen and (max-width: 650px) {
   .hero-img {
     background-position: none;
@@ -111,11 +113,10 @@ nav {
 
 @media screen and (max-width: 500px) {
   .hero-img {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 475px;
+    max-height: 475px;
   }
 }
-
 
 /* =================  
     ? Projects
@@ -126,12 +127,8 @@ nav {
   align-items: center;
   flex-flow: row wrap;
   background-color: var(--secondary-color-);
-  height: 80vh;
+  height: 50vh;
   min-width: 200px;
-}
-.close-modal {
-  border: 1px solid black;
-  padding: 5px;
 }
 .project-container {
   display: flex;
@@ -159,30 +156,66 @@ nav {
   background-color: var(--accent-color-);
 }
 
-
+@media screen and (max-width: 500px) {
+  .projects-handler {
+    height: 130vh;
+  }
+}
 
 /* =================  
     ? Modal
  ===================*/
-.modal-handler {
+ .modal-handler {
   position: absolute;
   z-index: 1000;
-  display: inherit;
+  max-height: 75vh;
+  min-height: 45vh;
+  max-width: 60vw;
+  border-radius: 5px;
 }
-.project-text-container {
-  background-color: var(--accent-color-);
+.modal-container h2 {
+  background-color: white;
+  margin: 10px 0;
+}
+.modal-text-container {
+  background-color: white;
+  border-radius: 5px;
+  margin: 25px 0;
+}
+.modal-container {
+  background-color: white;
+  border-radius: 5px;
+  padding: 25px;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.modal-btn {
+  background-color: #ffbf13;
   padding: 10px;
-}
-.project-text-container h3 {
-  background-color: var(--accent-color-);
-  margin-top: 5px;
-  padding: 5px;
-}
-.project-text-container p {
-  background-color: var(--accent-color-);
-  max-width: 450px;
-  padding: 5px;
+  border: #ffbf13;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 16px;
 }
 .modal-hidden {
   display: none;
+}
+.modal-img {
+  background-position: fixed;
+  background-size: cover;
+  background-position: 80%;
+  min-width: 800px;
+  min-height: 409px;
+}
+.collectors-haven-img {
+  background-image: url("./assets/images/collectors-haven.PNG");
+}
+.pwa-img {
+  background-image: url("./assets/images/pwa-screenshot.PNG");
+}
+.pizza-hunt-img {
+  background-image: url("./assets/images/pizza-hunt.PNG");
 }

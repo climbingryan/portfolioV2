@@ -10,7 +10,8 @@ const Projects = () => {
       description:
         "This site was built using MERN stack along with apollo boost, GraphQl for the API, react-router-dom, and more. I worked on the UI & UX trying to make a responsive, but clean and intuitive ui. ",
       link: "https://aqueous-taiga-86315.herokuapp.com/",
-      class: "collectors-haven",
+      classAnimation: "collectors-haven",
+      img: 'collectors-haven-img',
       id: 1,
       key: 11,
     },
@@ -19,7 +20,8 @@ const Projects = () => {
       description:
         "This was a challenge where i was to convert an existing app into a pwa. Included is a web manifest, service worker to handle offline functionality, and indexDb to store offline data for when the user goes back online",
       link: "https://safe-oasis-51981.herokuapp.com/",
-      class: "pwa",
+      classAnimation: "pwa",
+      img: 'pwa-img',
       id: 2,
       key: 22,
     },
@@ -28,7 +30,8 @@ const Projects = () => {
       description:
         "This was my first mongodb fullstack application built as a lesson during my bootcamp. Using Node.js, Mongodb, mongoose",
       link: "https://boiling-ravine-77749.herokuapp.com/",
-      class: "pizza-hunt",
+      classAnimation: "pizza-hunt",
+      img: 'pizza-hunt-img',
       id: 3,
       key: 33,
     },
