@@ -185,7 +185,7 @@ nav {
 .modal-container {
   background-color: white;
   border-radius: 5px;
-  padding: 25px;
+  padding: 25px 55px;
   display: flex;
   flex-flow: column wrap;
   text-align: center;
@@ -207,15 +207,11 @@ nav {
   background-position: fixed;
   background-size: cover;
   background-position: 80%;
-  min-width: 800px;
-  min-height: 409px;
+  background-color: white;
+  max-height: 450px;
 }
-.collectors-haven-img {
-  background-image: url("./assets/images/collectors-haven.PNG");
-}
-.pwa-img {
-  background-image: url("./assets/images/pwa-screenshot.PNG");
-}
-.pizza-hunt-img {
-  background-image: url("./assets/images/pizza-hunt.PNG");
-}
+
+
+/* =================  
+    ? Contact
+ ===================*/

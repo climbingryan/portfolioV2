@@ -10,7 +10,7 @@ const Modal = ({ currentModalState, closeModal, info }) => {
     <div className="modal-handler">
       <div className="modal-container">
         <h2 style={{ backgroundColor: "white" }}>{info.projects.title}</h2>
-        <div className={`${info.projects.img} modal-img`} alt="project"></div>
+        <img src={`${info.projects.img}`} alt={`${info.projects.alt}`} className='modal-img'></img>
         <div className="modal-text-container">
           <p style={{ backgroundColor: "white" }}>
             {info.projects.description}

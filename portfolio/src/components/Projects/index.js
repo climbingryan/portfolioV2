@@ -1,5 +1,9 @@
 import React from "react";
 
+import cHavenImg from '../../assets/images/artifact.png';
+import pwaImg from '../../assets/images/bills.png';
+import pizzaImg from '../../assets/images/fast-food-2.png';
+
 import Project from '../Project';
 
 const Projects = () => {
@@ -11,7 +15,8 @@ const Projects = () => {
         "This site was built using MERN stack along with apollo boost, GraphQl for the API, react-router-dom, and more. I worked on the UI & UX trying to make a responsive, but clean and intuitive ui. ",
       link: "https://aqueous-taiga-86315.herokuapp.com/",
       classAnimation: "collectors-haven",
-      img: 'collectors-haven-img',
+      img: `${cHavenImg}`,
+      alt: 'collectors haven',
       id: 1,
       key: 11,
     },
@@ -21,7 +26,8 @@ const Projects = () => {
         "This was a challenge where i was to convert an existing app into a pwa. Included is a web manifest, service worker to handle offline functionality, and indexDb to store offline data for when the user goes back online",
       link: "https://safe-oasis-51981.herokuapp.com/",
       classAnimation: "pwa",
-      img: 'pwa-img',
+      img: `${pwaImg}`,
+      alt: 'progressive web app',
       id: 2,
       key: 22,
     },
@@ -31,7 +37,8 @@ const Projects = () => {
         "This was my first mongodb fullstack application built as a lesson during my bootcamp. Using Node.js, Mongodb, mongoose",
       link: "https://boiling-ravine-77749.herokuapp.com/",
       classAnimation: "pizza-hunt",
-      img: 'pizza-hunt-img',
+      img: `${pizzaImg}`,
+      alt: 'pizza hunt',
       id: 3,
       key: 33,
     },
