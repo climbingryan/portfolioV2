@@ -129,6 +129,7 @@ nav {
   background-color: var(--secondary-color-);
   height: 50vh;
   min-width: 200px;
+  margin-bottom: 15%;
 }
 .project-container {
   display: flex;
@@ -153,6 +154,9 @@ nav {
   background-color: var(--accent-color-);
 }
 .pizza-hunt {
+  background-color: var(--accent-color-);
+}
+.tech-blogger {
   background-color: var(--accent-color-);
 }
 
@@ -215,3 +219,31 @@ nav {
 /* =================  
     ? Contact
  ===================*/
+
+.contact-handler {
+  text-align: center;
+  padding: 50px;
+  min-width: 100%;
+  max-height: 50%;
+  min-height: 10%;
+  background-color: #f7d3c5;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+.contact-handler h2 {
+  padding-bottom: 15px;
+}
+.icon-container {
+  background-color: #f7d3c5;
+  max-width: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.icon {
+  background-color: #f7d3c5;
+  margin: 0 10px;
+  color: black
+}

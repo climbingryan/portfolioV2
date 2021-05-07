@@ -3,6 +3,7 @@ import React from "react";
 import cHavenImg from '../../assets/images/artifact.png';
 import pwaImg from '../../assets/images/bills.png';
 import pizzaImg from '../../assets/images/fast-food-2.png';
+import techBlogImg from '../../assets/images/online-discussion.png'
 
 import Project from '../Project';
 
@@ -41,6 +42,17 @@ const Projects = () => {
       alt: 'pizza hunt',
       id: 3,
       key: 33,
+    },
+    {
+      title: "Tech Blogger",
+      description:
+        "This was my first mongodb fullstack application built as a lesson during my bootcamp. Using Node.js, Mongodb, mongoose",
+      link: "sleepy-shore-05861.herokuapp.com/",
+      classAnimation: "tech-blogger",
+      img: `${techBlogImg}`,
+      alt: 'tech blogger',
+      id: 4,
+      key: 44,
     },
   ];
 
