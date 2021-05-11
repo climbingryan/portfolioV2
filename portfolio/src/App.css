@@ -98,7 +98,6 @@ nav {
   background-position: fixed;
   background-size: cover;
   max-width: 650px;
-  max-width: 650px;
 }
 .upper-svg {
   margin-top: 11.5px;
@@ -129,7 +128,6 @@ nav {
   background-color: var(--secondary-color-);
   height: 50vh;
   min-width: 200px;
-  margin-bottom: 15%;
 }
 .project-container {
   display: flex;
@@ -220,17 +218,18 @@ nav {
     ? Contact
  ===================*/
 
-.contact-handler {
-  text-align: center;
-  padding: 50px;
-  min-width: 100%;
-  max-height: 50%;
-  min-height: 10%;
-  background-color: #f7d3c5;
+ .contact-handler {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
+  z-index: 0;
+  padding: 50px;
+  min-width: 100%;
+  max-height: 50%;
+  min-height: 10%;
+  text-align: center;
+  background-color: #f7d3c5;
 }
 .contact-handler h2 {
   padding-bottom: 15px;

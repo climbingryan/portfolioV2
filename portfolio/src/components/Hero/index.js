@@ -1,12 +1,41 @@
 import React from "react";
+import anime from "animejs/lib/anime.es";
 import img from "../../assets/images/green-code-typing.png";
 
 const Hero = () => {
+
+  const heroImg = () => {
+    anime({
+      targets: '.hero-img',
+      translateX: [275, -100],
+      opacity: [0, 1],
+      duration: 1500,
+      easing: 'easeInOutExpo'
+    });
+  }
+  const heroTextAnime = () => {
+    anime({
+      targets: '.hero-title',
+      translateX: [-300, 0],
+      opacity: [0, 1],
+      duration: 1500,
+      easing: 'easeInOutExpo'
+    });
+    anime({
+      targets: '.hero-p',
+      translateY: [300, 0],
+      opacity: [0, 1],
+      duration: 1500,
+      easing: 'easeInOutExpo',
+      delay: 200
+    })
+  }
+
   return (
-    <div className="hero-handler">
-      <div className="hero-text-handler">
-        <h2>Hi, I'm a FullStack Developer</h2>
-        <p>
+    <div className="hero-handler" onLoad={() => {heroTextAnime()}}>
+      <div className="hero-text-handler" >
+        <h2 className='hero-title'>Hi, I'm a FullStack Developer</h2>
+        <p className='hero-p'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -16,7 +45,7 @@ const Hero = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-      <div className="hero-img-handler">
+      <div className="hero-img-handler" onLoad={() => {heroImg()}}>
         <img className="hero-img" src={img} alt="green web dev computer"></img>
       </div>
 
