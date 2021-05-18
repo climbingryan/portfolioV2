@@ -47,7 +47,7 @@ const Project = (props) => {
         onMouseOut={() => onLeave()}
         onClick={() => setOpenModal(true)}
       >
-        <h2 className={props.projects.classAnimation}>{props.projects.title}</h2>
+        <h2 className={`${props.projects.classAnimation} proj-title`}>{props.projects.title}</h2>
       </div>
     </>
   );

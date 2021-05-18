@@ -3,7 +3,7 @@ import React from "react";
 import cHavenImg from '../../assets/images/artifact.png';
 import pwaImg from '../../assets/images/bills.png';
 import pizzaImg from '../../assets/images/fast-food-2.png';
-import techBlogImg from '../../assets/images/online-discussion.png'
+import cryptoImg from '../../assets/images/cryptocurrency.png';
 
 import Project from '../Project';
 
@@ -44,19 +44,28 @@ const Projects = () => {
       key: 963,
     },
     {
-      title: "Tech Blogger",
+      title: "dBank",
       description:
-        "This was my first MYSQL fullstack application built as a lesson during my bootcamp. Using Node.js, MYSQL, Sequillize & Handlebars",
-      link: "https://sleepy-shore-05861.herokuapp.com/",
-      classAnimation: "tech-blogger",
-      img: `${techBlogImg}`,
-      alt: 'tech blogger',
+        "This is my first Ethereum blockchain application called dBank. Users can deposit ETH into dBank and gain interest over time, and withdraw the ETH when they need to. This app was made with solidity, web3.js, react, metaMask, truffle, and ganache",
+      link: "https://github.com/climbingryan/DeFiBank",
+      classAnimation: "crypto",
+      img: `${cryptoImg}`,
+      alt: 'dBank',
       id: 4,
       key: 238,
     },
   ];
 
   return (
+    <>
+    <svg className='upper-svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#d9cef5"
+          fillOpacity="1"
+          d="M0,224L48,224C96,224,192,224,288,197.3C384,171,480,117,576,117.3C672,117,768,171,864,170.7C960,171,1056,117,1152,133.3C1248,149,1344,235,1392,277.3L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+        <a href="https://storyset.com/work">Illustration by Freepik Storyset</a>
+      </svg>
     <div id="projects" className="projects-handler">
       {projects.map((project) => {
         return (
@@ -66,6 +75,7 @@ const Projects = () => {
         );
       })}
     </div>
+  </>
   );
 };
 

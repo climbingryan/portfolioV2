@@ -2,24 +2,19 @@ import React from "react";
 
 const Header = () => {
 
-
-
   return (
     <header id='home'>
       <div className="logo">Kevin Simmons</div>
       <nav>
         <ul className="nav-list">
-          <li onFocus={(e) => {
-            console.log(e.currentTarget);
-            console.log(e.target)
-          }}>
-            <a href="#home" className='list-element'>Home</a>
+          <li className='nav-home'>
+            <a href="#home" className='nav-list-element'>Home</a>
           </li>
-          <li>
-            <a href="#projects" className='list-element'>Projects</a>
+          <li className='nav-projects'>
+            <a href="#projects" className='nav-list-element nav-projects'>Projects</a>
           </li>
-          <li>
-            <a href='#contact' className='list-element'>Contact</a>
+          <li className='nav-contact'>
+            <a href='#contact' className='nav-list-element nav-contact'>Contact</a>
           </li>
         </ul>
       </nav>
